@@ -22,29 +22,29 @@ class ProductoBaseView(View):
 class ProductoListView(ProductoBaseView,ListView):
     ...
  
-''' 
-class ProductoDetailView(ProductoBaseView,DetailView):
-    template_name = "vino_detail.html"
+# 
+# class ProductoDetailView(ProductoBaseView,DetailView):
+#     template_name = "vino_detail.html"
 
-class ProductoCreateView(ProductoBaseView,CreateView):
-    template_name = "vino_create.html"
-    extra_context = {
-        "tipo": "Crear"
-    }
+# class ProductoCreateView(ProductoBaseView,CreateView):
+#     template_name = "vino_create.html"
+#     extra_context = {
+#         "tipo": "Crear"
+#     }
 
 
-class ProductoUpdateView(ProductoBaseView,UpdateView):
-    template_name = "vino_create.html"
-    extra_context = {
-        "tipo": "Actualizar "
-    }
+# class ProductoUpdateView(ProductoBaseView,UpdateView):
+#     template_name = "vino_create.html"
+#     extra_context = {
+#         "tipo": "Actualizar "
+#     }
 
-class ProductoDeleteView(ProductoBaseView,DeleteView):
-    template_name = "vino_delete.html"
-    extra_context = {
-        "tipo": "Borrar "
-    }
- '''
+# class ProductoDeleteView(ProductoBaseView,DeleteView):
+#     template_name = "vino_delete.html"
+#     extra_context = {
+#         "tipo": "Borrar "
+#     }
+#  
     
     
     
