@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-0zlg8=c^3t!3$zm953g7d(yuaq6798j0g^as0sbi4@d*^k95ad
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["mava1682.pythonanywhere.com"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -81,23 +81,23 @@ WSGI_APPLICATION = "pet_Shop.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-        
-#     }
-# }
 DATABASES = {
-'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'Mava1682$Petshop_project',
-            'USER': 'Mava1682',
-            'PASSWORD': 'pet123',
-            'HOST': 'Mava1682.mysql.pythonanywhere-services.com',
-            'PORT': '3306',
-        }
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': BASE_DIR / 'db.sqlite3',
+        
+     }
 }
+# DATABASES = {
+# 'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': 'Mava1682$Petshop_project',
+#             'USER': 'Mava1682',
+#             'PASSWORD': 'pet123',
+#             'HOST': 'Mava1682.mysql.pythonanywhere-services.com',
+#             'PORT': '3306',
+#         }
+# }
 
 
 # Password validation
@@ -142,6 +142,12 @@ STATICFILES_DIRS = [
     
 ]
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR / "media") 
+
 
 
 # Default primary key field type

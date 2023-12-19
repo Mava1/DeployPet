@@ -3,6 +3,7 @@ from django.urls import path
 from django.urls import include
 from .views import IndexPage , Contacto, Tienda
 
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", IndexPage.as_view(), name = "index"),
@@ -13,6 +14,8 @@ urlpatterns = [
 
 ]
 
-'''    path("perros/" , Perros.as_view(), name= "perros"),
-    path("gatos/" , Gatos.as_view(), name= "gatos") '''
+from django.conf import settings
+from django.conf.urls.static import static
     
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
